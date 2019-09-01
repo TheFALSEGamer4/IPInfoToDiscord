@@ -10,13 +10,15 @@ function postDataToWebhook(data) {
 	var storedip = localStorage.getItem("UserIP")
 
 	//url to your webhook
-	var webHookUrl = "https://discordapp.com/api/webhooks/616002157908459539/Fbth7WJjqLnScBGVij8ttgxTMBn6l3mOEtRGZI5JO0PTOpVWa7CSSbYW-4l_HMVG_pvr";
+	var webHookUrl = "PutYourDiscordWebhookURLHere";
 
 
 	//https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
 	var oReq = new XMLHttpRequest();
-	var myJSONStr = { "content": "New User IP Address: " + ip, "username": "Users IP Address", "avatar_url": "https://hunter-central-hub--thefalsegamer4.repl.co/webdev.png" };
+	var myJSONStr = { "content": "New User IP Address: " + ip, "username": "NameForBotInChannelGoesHere", "avatar_url": "LinkToAvatarPictureGoesHere" };
 
+	
+	//simple searching algoristhm to see if user has been on the site before, does work for a different device on the same network or if user is in incognito. 
 	if (ip == storedip) {
 		console.log("Same User")
 	} else {
