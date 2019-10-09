@@ -18,7 +18,7 @@ function postDataToWebhook(data) {
 	var myJSONStr = { "content": "New User IP Address: " + ip, "username": "NameForBotInChannelGoesHere", "avatar_url": "LinkToAvatarPictureGoesHere" };
 
 	
-	//simple searching algoristhm to see if user has been on the site before, does work for a different device on the same network or if user is in incognito. 
+	//simple searching algorithm to see if user has been on the site before, does work for a different device on the same network or if user is in incognito. 
 	if (ip == storedip) {
 		console.log("Same User")
 	} else {
